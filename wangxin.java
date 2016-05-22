@@ -9,7 +9,7 @@ public class wangxin {
 	public static JFrame frame = new JFrame("周雪莹");
 	public static JPanel panel = new JPanel();
 	public static JSlider slider = new JSlider(JSlider.HORIZONTAL,1,21,1);
-	public static JLabel inst = new JLabel("周雪莹我爱你 周雪莹我爱你 周雪莹我爱你 周雪莹我爱你 周雪莹我爱你");
+	public static JLabel inst = new JLabel("周雪莹我爱你 周雪莹我爱你 周雪莹我爱你 周雪莹我爱你 周雪莹我爱你 周雪莹我爱你 周雪莹我爱你 周雪莹我爱你 周雪莹我爱你");
 	public static JLabel image = new JLabel();
 	public static Timer timer  = new Timer(22 * 30, new event());
 	public static int frameslide = 1;
@@ -37,7 +37,7 @@ public class wangxin {
 
 	public static class event implements ActionListener{
 		public void actionPerformed( ActionEvent e ) {
-			if (frameslide == 23) {
+			if (frameslide == 11) {
 				frameslide = 1;
 			}else {
 				image.setIcon(new ImageIcon(frameslide + ".jpg"));
@@ -51,7 +51,7 @@ public class wangxin {
 		public void stateChanged(ChangeEvent event) {
 			JSlider source = (JSlider) event.getSource();
 			int speed = (int)source.getValue();
-			timer.setDelay(30 * (22 - speed));
+			timer.setDelay(10 * (22 - speed));
 		}
 	}
 	
